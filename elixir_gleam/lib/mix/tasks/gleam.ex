@@ -98,7 +98,8 @@ defmodule Mix.Tasks.Gleam.Build do
     |> Enum.flat_map(& &1)
     |> Enum.map(&File.exists?(&1))
     |> Enum.all?(&(&1 == true))
-    |> IO.inspect()
+
+    # |> IO.inspect()
 
     # for {path, name} <- dirs do
     #   dir_name = Path.join([gleam_erlang_path(), name])
